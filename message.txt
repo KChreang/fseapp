@@ -1,0 +1,239 @@
+let MENU = 0;
+
+function setup() {
+  createCanvas(500, 600);
+}
+
+function draw() {
+  print(mouseX, mouseY)
+  background(135,206,235);
+  
+  //App Name Box
+  noStroke();
+  fill(173,216,230);
+  ellipse(250,100,200,100);
+  fill(0,0,0);
+  textFont('Comic Sans MS');
+  textSize(32);
+  text("APP NAME", 170, 110);
+  
+  //START BUTTON
+  fill(173,216,230);
+  ellipse(150,300,200,100);
+  fill(0,0,0);
+  textFont('Comic Sans MS');
+  textSize(35);
+  text("Start", 100, 310);
+  
+  //settings box
+  fill(173,216,230);
+  ellipse(370,300,200,100);
+  fill(0,0,0);
+  textFont('Comic Sans MS');
+  textSize(32);
+  text("Settings", 310, 310);
+  
+  //bubbles
+  fill(172,216,230);
+  ellipse(120,190,30,20);
+  ellipse(40,600,60,70);
+  ellipse(80,80,30,40);
+  ellipse(300,400,80,40);
+  ellipse(300,10,40, 20);
+  ellipse(300,600,20,23);
+  ellipse(80,80,30,40);
+  ellipse(200,500,80,40);
+  ellipse(400,450,10,40);
+  ellipse(80,390,20,20);
+
+  
+  //MENU 1 (GAMES SELECTION)
+  if (MENU == 1) {
+    background(135,206,235)
+    
+    //GAME#1 BUTTON
+    fill(173,216,230);
+    rect(50, 100, 150, 150);
+    fill(0);
+    textSize(30)
+    text('Game #1', 60, 180)
+    
+    //GAME#2 BUTTON
+    fill(173,216,230);
+    rect(280, 100, 150, 150);
+    fill(0);
+    textSize(30)
+    text('Game #2', 290, 180)
+    
+    //GAME#3 BUTTON
+    fill(173,216,230);
+    rect(50, 350, 150, 150);
+    fill(0);
+    textSize(30)
+    text('Game #3', 60, 430)
+    
+    //GAME #4 BUTTON
+    fill(173,216,230);
+    rect(280, 350, 150, 150)
+    fill(0);
+    textSize(30)
+    text('Game #4', 290, 430)
+    
+    //BACK BUTTON FUNCTION
+    fill(173,216,230);
+    rect(375, 15, 110, 40)
+    fill(0);
+    textSize(30)
+    text('Back', 390, 45)
+  }  
+
+//MENU 2 (SETTINGS)
+if (MENU == 2) {
+  background(135,206,235)
+  textSize(30)
+  fill(0);
+  text('Settings go here', 140, 180)
+  
+  //BACK BUTTON FUNCTION
+    fill(173,216,230);
+    rect(375, 15, 110, 40)
+    fill(0);
+    textSize(30)
+    text('Back', 390, 45)
+}
+  
+  //GAME #1 FUNCTIONS(WE WILL SAVE THIS FOR LATER WHEN WE MAKE GAME#1 AND MAYBE ADD SOME OTHER FUNCTIONS ALONG THE WAY OUTSIDE OF THIS IF FUNCTION)
+  if (MENU == 3) {
+  background(135,206,235)
+  textSize(30)
+  fill(0);
+  text('GAME #1 goes here', 140, 180)
+  
+  //BACK BUTTON FUNCTION
+    fill(173,216,230);
+    rect(375, 15, 110, 40)
+    fill(0);
+    textSize(30)
+    text('Back', 390, 45)
+}
+  
+  
+  //GAME #2 FUNCTIONS(WE WILL SAVE THIS FOR LATER WHEN WE MAKE GAME#2 AND MAYBE ADD SOME OTHER FUNCTIONS ALONG THE WAY OUTSIDE OF THIS IF FUNCTION)
+  if (MENU == 4) {
+  background(135,206,235)
+  textSize(30)
+  fill(0);
+  text('GAME #2 goes here', 140, 180)
+  
+  //BACK BUTTON FUNCTION
+    fill(173,216,230);
+    rect(375, 15, 110, 40)
+    fill(0);
+    textSize(30)
+    text('Back', 390, 45)
+}
+  
+  
+  //GAME #3 FUNCTIONS (WE WILL SAVE THIS FOR LATER WHEN WE MAKE GAME#3 AND MAYBE ADD SOME OTHER FUNCTIONS ALONG THE WAY OUTSIDE OF THIS IF FUNCTION)
+  if (MENU == 5) {
+  background(135,206,235)
+  textSize(30)
+  fill(0);
+  text('GAME #3 goes here', 140, 180)
+  
+  //BACK BUTTON FUNCTION
+    fill(173,216,230);
+    rect(375, 15, 110, 40)
+    fill(0);
+    textSize(30)
+    text('Back', 390, 45)
+}
+  
+  
+  //GAME #4 FUNCTIONS (WE WILL SAVE THIS FOR LATER WHEN WE MAKE GAME#4 AND MAYBE ADD SOME OTHER FUNCTIONS ALONG THE WAY OUTSIDE OF THIS IF FUNCTION)
+  if (MENU == 6) {
+  background(135,206,235)
+  textSize(30)
+  fill(0);
+  text('GAME #4 goes here', 140, 180)
+  
+  //BACK BUTTON FUNCTION
+    fill(173,216,230);
+    rect(375, 15, 110, 40)
+    fill(0);
+    textSize(30)
+    text('Back', 390, 45)
+}
+  
+}
+  
+//ALL FUNCTIONS BELOW ARE INTERACTIVE BUTTON FUNCTIONS THAT MAKE IT SO WHEN THE MOUSE HOVERS OVER AND LEFT CLICKS THE BUTTON, IT GOES TO ITS DESIRED LOCATION (WE MAY NEED OTHER mouseClicked FUNCTIONS FOR THE GAMES)
+
+function mouseClicked() {
+  //MENU 0 BUTTON FUNCTIONS
+  if (MENU == 0) {
+    if (mouseX > 50 && mouseX < 250 && mouseY > 250 && mouseY < 350) {
+        MENU = 1;
+      }  
+      else if (mouseX > 300 && mouseX < 500 && mouseY > 250 && mouseY < 350){
+        MENU = 2;
+      }
+    }
+  
+  
+  //MENU 1 BUTTON FUNCTIONS
+  if (MENU == 1) {
+    if (mouseX > 380 && mouseX < 500 && mouseY > 20 && mouseY < 60) {
+        MENU = 0;
+      }  
+    else if (mouseX > 50 && mouseX < 200 && mouseY > 100 && mouseY < 250){
+        MENU = 3;
+      }
+    else if (mouseX > 300 && mouseX < 430 && mouseY > 100 && mouseY < 250){
+        MENU = 4;
+      }
+    else if (mouseX > 50 && mouseX < 200 && mouseY > 350 && mouseY < 500){
+        MENU = 5;
+      }
+    else if (mouseX > 300 && mouseX < 430 && mouseY > 350 && mouseY < 500){
+        MENU = 6;
+      }
+  }  
+  
+  
+  //MENU 2 BUTTON FUNCTIONS
+  if (MENU == 2) {
+    if (mouseX > 380 && mouseX < 500 && mouseY > 20 && mouseY < 60) {
+        MENU = 0;
+      }  
+    }
+  
+  //MENU 3 BUTTON FUNCTIONS
+  if (MENU == 3) {
+    if (mouseX > 380 && mouseX < 500 && mouseY > 20 && mouseY < 60) {
+        MENU = 1;
+      }  
+    }
+  
+  //MENU 4 BUTTON FUNCTIONS
+  if (MENU == 4) {
+    if (mouseX > 380 && mouseX < 500 && mouseY > 20 && mouseY < 60) {
+        MENU = 1;
+      }  
+    }
+  
+  //MENU 5 BUTTON FUNCTIONS
+  if (MENU == 5) {
+    if (mouseX > 380 && mouseX < 500 && mouseY > 20 && mouseY < 60) {
+        MENU = 1;
+      }  
+    }
+  
+  //MENU 6 BUTTON FUNCTIONS
+  if (MENU == 6) {
+    if (mouseX > 380 && mouseX < 500 && mouseY > 20 && mouseY < 60) {
+        MENU = 1;
+      }  
+  }
+}
+
